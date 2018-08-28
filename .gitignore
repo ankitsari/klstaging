@@ -1,0 +1,6 @@
+node_modules/
+.DS_Store/
+.idea/
+yarn.lock
+build
+react-redux-realworld-example-app.*.tar.gz

@@ -1,0 +1,29 @@
+.overlay {
+	width:100%;
+	text-align:center;
+	vertical-align: middle;
+	height: 100%;
+}
+.careerpath_block {
+	width: 100%;
+	float: left;
+	padding-bottom: 20px;
+}
+.home-content {
+	padding-top: 16%;
+	float: left;
+  text-align: center;
+  width: 100%;
+}
+.career_title {
+	font-size: 23px;
+  	font-weight: 800;
+  	text-align: center;
+  	color: #ffffff;
+  	margin-bottom: 5px;
+} 
+.career_info {
+	font-size: 16px;
+  text-align: center;
+  color: #ffffff;
+}

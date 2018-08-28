@@ -1,0 +1,94 @@
+.resp_article{
+	padding-top:20px;
+}
+.resp_Seca{
+	background:#fff;box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.19);padding:20px;border-radius: 4px;height: 210px;
+}
+.resp_Secb{
+	padding-bottom:20px;
+}
+.resp_articlersp{
+	float:left;font-weight:700;font-size:12px;width: 100%;
+}
+.text_respart{
+	margin-top: 10px;
+    border-radius: 4px;padding-left: 15px;
+    padding-top: 10px;width:100%;
+}
+.ret_check{
+	float:left;padding-top:6px;
+}
+.ret_pub{
+	float: left;
+    background: #2ecc71;
+    padding: 8px 30px 8px 30px;
+    color: #fff;
+    border-radius: 5px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+.btn_pubb{
+	width:63%;float:right;padding-top: 8px;
+}
+.btn_puba{
+	width:30%;float:left;
+}
+.img_respo{
+	width:15%;float:left;
+}
+.imgtxt_respo{
+	width:85%;float:left;padding-top: 8px;
+}
+.rep_wrap{
+	float: left;
+    width: 100%;
+	font-size: 11px;
+    font-weight: 700;
+}
+.rep_wrapb{
+	font-size: 11px;
+}
+.image_shp{
+	width:50px;
+}
+.text_bloom{
+	padding-top: 10px;
+    font-size: 17px;
+    font-weight: 500;
+	float:left;
+	word-break: break-word;
+	overflow-x:auto;
+	overflow-y: auto;
+    scroll-behavior: smooth;
+    max-height: 115px;
+}
+.rsp_btn{
+	    border: 1px solid #b3abab;
+    width: 238px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 26px;cursor:pointer;
+}
+.complete {
+	padding-top:10px;
+	font-size:16px;
+	text-align:center;
+	font-weight:600;
+}
+.button_position {
+	text-align:center;
+}
+.rsp_btn:focus {
+	outline:none;
+}
+@media screen and (min-width:786px) {
+	.no-padding-sides {
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+}

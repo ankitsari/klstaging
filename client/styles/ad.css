@@ -1,0 +1,38 @@
+.img_div {
+	padding-left:0px;
+	padding-right:0px;
+}
+.ad_desc {
+	 font-size: 14px;
+  letter-spacing: 0.1px;
+  text-align: left;
+  color: #797979;
+}
+
+.img_div {
+	padding-left:0px;
+	padding-right:0px;
+}
+.ad_desc {
+	 font-size: 14px;
+  letter-spacing: 0.1px;
+  text-align: left;
+  color: #797979;
+  padding-top:10px;
+  padding-bottom:10px;
+}
+.no-padding {
+	padding-left:0px;
+	padding-right:0px;
+}
+
+.shadow {
+	border-radius: 2px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.17);
+}
+.main_adver{
+	padding-left:0px;
+	padding-right:0px;
+	padding-bottom:10px;
+}

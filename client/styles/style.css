@@ -1,0 +1,79 @@
+html
+{
+	height:100%;
+}
+body
+{
+	height:100%;
+	margin: 0px;
+}
+.red {
+	color: red
+}
+
+.topnav {
+  overflow: hidden;
+  background: #00c5ff;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #0000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.nav_icon {
+    float: left;
+    font-weight: bold;
+    margin-left: 20px;
+    color: #fff;
+}
+
+.nav_bar_links{
+  float:right;
+}
+
+.facebook_login{
+    padding: 5px;
+    margin-top: -1px;
+    background: none;
+    border: solid 0.9px #ffffff;
+    font-size: 11px;
+}
+
+.main_title{
+  font-family: MerriweatherSans;
+  font-size: 46.2px;
+  font-weight: 300;
+  text-align: center;
+  color: #ffffff;
+  padding: 185px;
+}
+
+.KnowledgeLocker {
+  width: 154px;
+  height: 24px;
+  font-family: Poppins;
+  font-size: 17.2px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.KnowledgeLocker .text-style-1 {
+  font-weight: bold;
+}
+.bg{
+  background: url('https://intrakraft-codewave.s3.ap-south-1.amazonaws.com/world_of_puma.jpg');
+}
+.cursor{
+      cursor: pointer;
+}

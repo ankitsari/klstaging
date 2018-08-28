@@ -1,0 +1,66 @@
+.main_div {
+	background: linear-gradient(to left, #00c5ff, #5d98ff); 
+}
+.kb_title {
+	
+	padding-bottom: 15px;
+}
+.kb_title_p {
+	font-size: 40px;
+  text-align: left;
+  color: #333333;
+  padding-bottom: 20px;
+}
+.ux-search-input {
+	
+}
+.search-container {
+  
+}
+.search-box {
+  width: 69%;
+    padding: 10px;
+     padding-right: 50px;
+    border: solid 1px #adadad;
+    font-size: 14px;
+}
+.search-button {
+  position: absolute;
+    background-color: #00c5ff;
+    border: 0;
+    color: #FFF;
+    width: 41px;
+    float: right;
+    height: 41px;
+    outline: 0;
+    margin-top: 1px;
+    margin-left: -40px;
+}
+.kb_info {
+	opacity: 0.61;
+	font-size: 18px;
+  font-style: italic;
+  text-align: left;
+  padding-top: 30px;
+  color: #5b5b5b
+}
+.row-padding{
+  padding: 28px;
+}
+.sponsored_links {
+	font-size: 14px;
+  letter-spacing: 0.1px;
+  text-align: left;
+  padding-bottom:10px;
+  color: #797979;
+}
+.ad_links {
+	border-radius: 2px;
+	background-color: #ffffff;
+	box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05), 0 2px 2px 0 rgba(0, 0, 0, 0.05);
+	padding-top: 15px;
+    padding-bottom: 15px;
+}
+.full_div {
+	padding-top:50px;
+}

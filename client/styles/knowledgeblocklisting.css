@@ -1,0 +1,162 @@
+.block {
+	width:100%;
+	float: left;
+	border-radius: 2px;
+    box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.19);
+}
+.extra-padding {
+	padding-bottom: 20px;
+}
+.block_image {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+.block_content {
+	width: 100%;
+    padding: 15px;
+    float: left;
+}
+.block_notificationsKL {
+	width: 33.33%;
+	float: left;
+}
+.block_title {
+	font-size: 16px;
+	font-weight: bold;
+	letter-spacing: 0.2px;
+	text-align: left;
+	overflow:hidden;
+	color: #797979;
+	height: 50px;
+}
+.block_description {
+	font-size: 16px;
+	letter-spacing: 0.2px;
+	text-align: justify;
+	color: #797979;
+	height: 46px;
+	margin-bottom: 0px;
+  
+}
+
+/* styles for '...' */ 
+.block_description {
+  /* hide text if it more than N lines  */
+  overflow: hidden;
+  /* for set '...' in absolute position */
+  position: relative; 
+  /* max-height = line-height (1.2) * lines max number (3) */
+  max-height: 3em; 
+  /* fix problem when last visible word doesn't adjoin right side  */
+  
+  /* */
+  margin-right: 12px;
+  padding-right: 14px;
+}
+.block_description:before {
+  /* points in the end */
+  content: '...';
+  /* absolute position */
+  position: absolute;
+  /* set position to right bottom corner of block */
+  right: 0;
+  bottom: 0;
+}
+.block_description:after {
+  /* points in the end */
+  content: '';
+  /* absolute position */
+  position: absolute;
+  /* set position to right bottom corner of text */
+  right: 0;
+  width: 1em;
+  /* set width and height */
+  height: 1em;
+  margin-top: 0.2em;
+  background: white;
+}
+.block_activity {
+    font-size: 12px;
+    letter-spacing: 0.1px;
+    text-align: left;
+    position: relative;
+    color: #797979;
+    top: 4px;
+    left: 2px;
+}
+.sub_content {
+	padding-bottom: 10px;
+}
+.filterKB {
+	margin-top: 15px;
+	padding-left:0px;
+	padding-right:0px;
+}
+.kb_info_listing {
+	opacity: 0.61;
+    font-size: 18px;
+    font-style: italic;
+    text-align: left;
+    float:left;
+    color: #5b5b5b;
+}
+.following_image {
+	width:15px;
+	height:15px;
+}
+.block_activity_unfollow {
+	font-size: 12px;
+    letter-spacing: 0.1px;
+    text-align: left;
+    position: relative;
+    color: #00c5ff;
+    top: 4px;
+    left: 2px;
+}
+.text_center {
+	text-align:center;
+	font-size:14px;
+	color:#000;
+}
+.follow_width {
+	width:28%;
+	float:left;
+}
+.resource_width {
+	width:34%;
+	float:left;
+}
+.knowledge_width {
+	width:38%;
+	float:left;
+}
+.tick {
+	width:15px;
+	height:15px;
+}
+.tick_block {
+	width:35%;
+	float:left;
+}
+.videos_block {
+	width:35%;
+	float:left;
+}
+.follow_block {
+	width:30%;
+	float:left;
+}
+@media screen and (min-width:991px) {
+	.right-padding-zero {
+		padding-right:0px;
+	}
+}
+
+@media screen and (min-width:320px) and (max-width:480px) {
+	.tick_block {
+		width:39%;
+	}
+	.videos_block {
+		width:31%;
+	}
+}

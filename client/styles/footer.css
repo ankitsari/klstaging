@@ -1,0 +1,123 @@
+.footer-main {
+	padding-top: 70px;
+    padding-bottom: 40px;
+}
+.footer-title {
+	font-size: 23px;
+	text-align: left;
+	color: #ffffff;
+}
+.footer-paragraph {
+	font-size: 14px;
+	font-weight: 300;
+	line-height: 1.56;
+	letter-spacing: 0.4px;
+	text-align: left;
+	color: #ffffff;
+}
+.footer-two-title {
+	font-size: 16px;
+	font-weight: bold;
+	letter-spacing: 0.4px;
+	text-align: left;
+	color: #ffffff;
+}
+.footer-two-paragraph {
+	font-size: 14px;
+	font-weight: 300;
+	line-height: 1.56;
+	letter-spacing: 0.4px;
+	text-align: left;
+	color: #ffffff;
+}
+
+.icons {
+    padding: 0px 0px 0px 0px;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background: #ffffff;
+    border-radius: 100%;
+    text-align: center;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+.fo {
+    color: #535353;
+    padding-top: 7px;
+}
+.footer-div {
+	background : url('https://s3.amazonaws.com/klockerimg/bitmapfooter.png') no-repeat;
+	margin-left:0px;
+	margin-right:0px;
+	 background-size: cover;
+
+}
+.copyright {
+	float:left;
+	text-align:right;
+	color:#fff;
+}
+.links {
+	float:left;
+	text-align:left;
+	color:#fff;
+}
+.terms {
+	width:23%;
+	float:left;
+	padding-left:5px;
+	padding-right:5px;
+}
+.center-link {
+	border-left : 1px solid #fff;
+	border-right : 1px solid #fff;
+	text-align:center;
+}
+.left-text {
+	text-align:right;
+	padding-right:10px;
+}
+.right-text {
+	text-align:left;
+	padding-left:10px;
+}
+.footer-div-copiright {
+	margin-left:0px;
+	margin-right:0px;
+	background-color: #0a1f47;
+	padding-top:40px;
+	padding-bottom:40px;
+}
+.knowledgelocker-footer {
+	width:100%;
+	float:left;
+}
+.footer-links {
+	color:#fff;
+	text-decoration:none;
+}
+@media screen and (min-width:320px) and (max-width:768px) {
+	.center-link {
+		border-left:0px;
+		border-right:0px;
+	}
+	.left-text {
+		text-align:center;
+		padding-right:15px;
+	}
+	.right-text {
+		text-align:center;
+		padding-left:15px;
+	}
+	.terms {
+		width:100%;
+		padding-bottom:10px;
+	}
+	.copyright {
+		text-align:center;
+	}
+	.mobile_view {
+		padding-bottom:10px;
+	}
+}

@@ -1,0 +1,204 @@
+.main_div_home {
+	background: url('https://s3.amazonaws.com/klockerimg/group-5.png') no-repeat; 
+	background-size: 100% 100%;
+}
+.title_p {
+	text-align: center;
+	
+	color: #fff;
+	font-size: 46px;
+	font-weight: 100;
+	padding-bottom: 15px;
+}
+.text-center {
+	text-align: center;
+}
+.popular_courses {
+	padding: 10px 15px;
+	color: #fff;
+	font-size: 14px;
+	border: 1px solid #fff;
+	border-radius: 6px;
+	margin-right: 10px;
+
+}
+.popular_courses:hover {
+	text-decoration: none;
+	color: #fff;
+}
+.title_content {
+	padding-top: 15.5%;
+	padding-bottom: 19.5%;
+}
+.careerpath_content {
+	padding-top: 30px;
+}
+.careerpath_section {
+	padding-top: 50px;
+	padding-bottom: 80px;
+	background-color: #f6f6f6;
+}
+.careerpath_p {
+	text-align: center;
+	color: #444444;
+	font-size: 40px;
+	font-weight: 100;
+	padding-bottom: 15px;
+}
+.careerpath_image {
+	text-align: right;
+}
+.careerpath_options {
+	padding-left: 10%;
+	padding-top: 3%;
+	padding-right: 10%; 
+}
+.para_heading {
+	font-size: 24px;
+	margin-bottom: 5px;
+}
+.explore_career {
+	color: #04a4d3;
+}
+.discover_blocks {
+	color: #3e7be4;
+}
+.craft_learning {
+	color: #0346bb;
+}
+.para {
+	color:#797979;
+	font-size: 16px;
+	padding-bottom:5px;
+}
+.careerpath_listing {
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+
+
+.fill {
+	padding-left: 45px;
+	padding-right: 45px;
+	width: 100%;
+	float: left;
+}
+.knowledgeblock_title{
+	padding-bottom: 15px;
+}
+.knowledgeblock_listing {
+	padding-top: 20px;
+	padding-bottom: 50px;
+}
+.knowledgeblock_title_p {
+	font-size: 26px;
+  text-align: left;
+  color: #5b5b5b;
+  float: left;
+}
+.view_all {
+  float: right;
+}
+.view_all_style {
+	font-size: 16px;
+  text-align: left;
+  color: #08c0ff;
+}
+.view_all_style:hover {
+	color: #08c0ff;
+	text-decoration: none;
+}
+.white_bg {
+	background-color:#fff;
+	width:100%;
+	float:left;
+}
+.top_three {
+	display:flex;
+	justify-content:center;
+	margin-top:15px;
+	margin-left:auto;
+	padding-bottom:40px;
+	margin-right:auto;
+	text-align:center;
+	position:relative;
+}
+.bottom_two {
+	display:flex;
+	justify-content:center;
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+	position:relative;
+}
+.top_links {
+	float:left;
+}
+.plus {
+	color: #fff;
+    font-size: 26px;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    padding: 0px 10px 5px 10px;
+}
+.plus_para {
+	margin-top:25px;
+}
+@media screen and (min-width:320px) and (max-width:480px) {
+	.fill {
+	padding-left: 0px;
+	padding-right: 0px;
+	}
+	.top_three {
+		width: 100%;
+		display:block;
+	}
+	.bottom_two {
+		width: 100%;
+		display:block;
+	}
+	.top_links {
+		width:100%;
+		float:left;
+		padding-bottom:40px;
+	}
+	.circular_image {
+		width:100%;
+	}
+	.careerpath_image {
+		text-align: center;
+	}
+}
+@media screen and (min-width:480px) and (max-width:1024px) {
+	.careerpath_image {
+		text-align: center;	
+	}
+}
+@media screen and (min-width:480px) and (max-width:600px) {
+	.top_three {
+		display:block;
+		justify-content:center;
+		padding-bottom:40px;
+	}
+	.bottom_two {
+		display:block;
+		justify-content:center;
+	}
+	.top_links {
+		width:100%;
+		float:left;
+		padding-bottom:40px;
+	}
+}
+@media screen and (min-width:1280px) and (max-width:1320px) {
+	.top_three {
+		display:flex;
+		justify-content:center;
+		padding-bottom:40px;
+	}
+	.bottom_two {
+		display:flex;
+		justify-content:center;
+	}
+}
