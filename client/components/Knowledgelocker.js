@@ -9,13 +9,17 @@ import axios from 'axios';
 import BaseUrl from '../config/properties';
 import { Collapse } from 'antd';
 import ReactPlayer from 'react-player';
+import Bookmarks from './Bookmarks'
+import MyAccount from './MyAccount'
+import ProfileModel from './ProfileModel'
+
 const Panel = Collapse.Panel;
 function callback(key) {
 	console.log(key);
   }
 const text = 'hello';
-require('../styles/article.css'); 
-
+require('../styles/article.css');
+require("async");
 function Player(props) {
 	return(
 		<ReactPlayer
@@ -31,15 +35,23 @@ class KnowledgeLocker extends React.Component {
 	constructor(props) {
 	    super(props);
 	    this.state={
+	    	currentTab:'NewsFeed',
 	    	careerPath:[],
-			knowledgeBlocks:[],
-			recommendedContentList:[],
+			  knowledgeBlocks:[],
+			  recommendedContentList:[],
 	    	authToken:'',
 	    	userData:[],
-			url:''
+			  url:'',
+				isBookMark: false,
+				isMyAccount: false,
+        bookmarksList:[],
+        profileInfo:[]
 	    }
-	  } 
-	componentDidMount(){
+	    this.changeTab = this.changeTab.bind(this);
+	    this.getBookmarkData = this.getBookmarkData.bind(this);
+	    this.getProfileInfo = this.getProfileInfo.bind(this);
+	  }
+	componentDidMount () {
 		let isLoggedIn = JSON.parse(localStorage.getItem('isLoggedIn'));
 		let authToken = null;
 		let userData = [];
@@ -53,7 +65,8 @@ class KnowledgeLocker extends React.Component {
 						url:userData.picture.data.url
 					});
 	   }
-	   console.log({authToken});
+
+    console.log({authToken});
 	   if (authToken) {
 			axios.get(BaseUrl.base_url+"/api/v1/CareerPath/Following?UserToken="+authToken).then((response)=>{
 				if (response.data.careerPaths.length) {
@@ -76,8 +89,45 @@ class KnowledgeLocker extends React.Component {
 					});
 				}
 			});
+      this.getBookmarkData()
+      this.getProfileInfo()
 		}
 	}
+
+  getBookmarkData() {
+    const config = {
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+        Authorization: localStorage.getItem('authToken')
+      }
+    }
+		axios.get(BaseUrl.base_url+"/api/v1/bookmark/getBookmarksForUser?start=1", config).then((response) => {
+    	this.setState({
+          bookmarksList: response.data.bookmarks.length && response.data.bookmarks
+        })
+      }).catch((error) => {
+			this.setState({error:error.message})
+    });
+  }
+
+  getProfileInfo(){
+    const config = {
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+        Authorization: localStorage.getItem('authToken')
+      }
+    }
+    axios.get(BaseUrl.base_url+"/api/v1/user/profile", config).then((response) => {
+      this.setState({
+        profileInfo: response.data
+      })
+    }).catch((error) => {
+      this.setState({error:error.message})
+    });
+  }
+
 	renderThis(obj, index){
 		console.log(obj.careerPathName);
 		return(
@@ -92,6 +142,11 @@ class KnowledgeLocker extends React.Component {
 			<li className="myList" key={index}><Link to={"/knowledgeblockdetails/"+obj.knowledgeBlock_Name_UrlEncoded+"/get_started"}>{obj.knowledgeBlock_Name}</Link></li>
 			);
 	}
+
+  changeTab(tab){
+    this.setState({currentTab: tab});
+  }
+
 	accordianComp(){
 		return(
 			<div>
@@ -110,17 +165,19 @@ class KnowledgeLocker extends React.Component {
 			</div>
     );
 	}
+
 	renderContentFeed(){
-		return(	
-				<div>
-				{this.state.recommendedContentList.map((obj, index) => {
-				return this.renderFeed(obj, index)
-				})}
-				</div>
-			);
+    return (
+			<div>
+        {this.state.recommendedContentList.map((obj, index) => {
+          return this.renderFeed(obj, index)
+        })}
+			</div>
+    );
 	}
+
 	renderFeed(obj,index)  {
-		var background = {
+		let background = {
 			width:'100%',
 			backgroundImage : "url("+obj.content_Image_URL_large+")",
 			backgroundRepeat  : 'no-repeat',
@@ -164,17 +221,18 @@ class KnowledgeLocker extends React.Component {
 						<a href={obj.content_URL} target="_blank"><p className="block_title">{obj.content_Title}</p></a>
 						<p className="knl_disc">{obj.content_Description}</p>
 					</div>
-				</div> 
+				</div>
 				<div className="col-md-12">
 					<p className="article_innercontwrapknl"><i>{obj.feed_content_tags}</i></p>
 					<p className="article_innercontwrapknl"><i className="fa fa-circle dotart" aria-hidden="true"></i><i>{obj.content_created_Date}</i></p>
 				</div>
-			</div> 
+			</div>
 			)
 		}
-        
-    }
+	}
+
 	render() {
+		const {profileInfo,currentTab} = this.state
 		return(
 			<div>
 				<div className="main_div">
@@ -186,7 +244,7 @@ class KnowledgeLocker extends React.Component {
 					</div>
 					<div className="col-md-12 col-sm-12 col-xs-12 article_content">
 						<div>
-							<div className="col-md-3 col-sm-3 col-xs-12 extra-padding no_left_padding">
+							<div className="col-md-3 col-sm-3 col-xs-12 extra-padding side-pan no_left_padding">
 								<div className="block">
 									<div className="knl_locfull">
 										<div className="knl_locfullinner">
@@ -196,6 +254,8 @@ class KnowledgeLocker extends React.Component {
                         {/*<p className="knl_locfulluserinnerwrap">San Francisco</p>*/}
 											</div>
 										</div>
+										<p onClick={() => {this.changeTab('NewsFeed')}}
+											 className={currentTab === "NewsFeed" ? "text-info" : "cursor" }>News Feed</p>
 										<p className="knw_car">My Career Paths</p>
 										<div className="full_app">
 											<ul>{this.accordianComp()}</ul>
@@ -204,28 +264,48 @@ class KnowledgeLocker extends React.Component {
 										<div className="full_app">
 											<ul>{this.accordianKB()}</ul>
 										</div>
-										<p>News Feed</p>
-										<p className="knw_car">My Bookmarks</p>
+
+										<div className="full_app">
+											<p onClick={() => {this.changeTab('BookMarks')}}
+												 className={currentTab === "BookMarks" ? "text-info knw_car" : "knw_car cursor"}>My Bookmarks</p>
+										</div>
+
+										<div className="full_app">
+											<p onClick={() => {this.changeTab('MyAccount')}}
+												 className={currentTab === "MyAccount" ? "text-info knw_car" : "knw_car cursor"}>My Account</p>
+										</div>
+
 									</div>
 								</div>
 							</div>
 						</div>
+
 						<div>
-							<div className="col-md-6 col-sm-6 col-xs-12 extra-padding">
-                {this.renderContentFeed()}
+							<div className={` ${currentTab === 'MyAccount' ? 'col-md-9 col-sm-9 ' : 'col-md-6 col-sm-6 '} col-xs-12 extra-padding`}>
+                {currentTab === 'BookMarks' &&
+									<Bookmarks getData={this.getBookmarkData}
+														 error={this.state.error}
+														 bookmarksList={this.state.bookmarksList}/>}
+                {currentTab === 'MyAccount' &&
+									<MyAccount profileInfo={profileInfo}
+														 getAccount={this.getProfileInfo}/>}
+                {currentTab === 'NewsFeed' && this.renderContentFeed()}
 							</div>
-						</div>
-						<div>
-							<div className="col-md-3 col-sm-3 col-xs-12 extra-padding no_right_padding">
-                {/*
-								<div className="full_app">
-									<p className="art_spon">Recommended Learnings</p>
-								</div>
-							*/}
-								<div className="ad_links_vertical">
-									<p className="sponsored_links_vertical">Useful Links</p>
-									<AdvertisementVertical/>
-								</div>
+							<div>
+                {
+                  currentTab != 'MyAccount' ?
+								<div className="col-md-3 col-sm-3 col-xs-12 extra-padding no_right_padding">
+                  {/*
+									<div className="full_app">
+										<p className="art_spon">Recommended Learnings</p>
+									</div>
+								*/}
+									<div className="ad_links_vertical">
+										<p className="sponsored_links_vertical">Useful Links</p>
+										<AdvertisementVertical/>
+									</div>
+								</div>:null
+                }
 							</div>
 						</div>
 					</div>

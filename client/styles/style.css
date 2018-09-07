@@ -77,3 +77,108 @@ body
 .cursor{
       cursor: pointer;
 }
+
+.ad_desc{
+    padding-top: 2px !important;
+    padding-bottom: 2px !important;
+}
+
+.ant-row{
+    margin-top: 18px;
+}
+
+.user-nm{
+    float: left;
+    text-align: left;
+}
+.user-mn{
+    float: right;
+    text-align: right;
+}
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+    background-color: #d7eafc;
+    padding: 5px;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    /*min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;*/
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    cursor: inherit;
+    display: block;
+    width: 100%;
+}
+
+.btnSaveProfile {
+    width: 125px;
+    height: 35px;
+    background-color: #18b324;
+    border-color: #18b324;
+}
+
+.save-btn{
+    display: inline-flex;
+    justifyContent: center;
+    alignItems: center;
+    marginBottom: 10px;
+}
+
+.side-pan{
+    margin-bottom: 50px;
+}
+.account-pg{
+    padding: 5px 5px 20px 5px;
+}
+
+.account-img{
+    height:100px;
+    width:100px;
+    border-radius: 50px;
+}
+
+.menu-icon{
+    float: right;
+    font-size: 24px;
+}
+
+.fb-account{
+    font-size: 80px;
+    color: #39549f;
+}
+
+.user-details{
+    padding-left: 15px;
+}
+
+.fb-icon{
+    font-size: 24px !important;
+    color: #39549f;
+}
+
+.li-icon{
+    font-size: 24px !important;
+    color: #3480b0;
+}
+.be-icon{
+    font-size: 24px !important;
+    color: #3172b4;
+}
+
+.twit-icon{
+     font-size: 24px !important;
+     color: #bdbdbc;
+}
+
+.git-icon{
+    font-size: 24px !important;
+    color: #000000;
+}
